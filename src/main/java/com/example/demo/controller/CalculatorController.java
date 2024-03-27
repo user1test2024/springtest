@@ -11,7 +11,7 @@ public class CalculatorController {
 
     @GetMapping("/")
     public String index() {
-        return "index"; // index.htmlを表示
+        return "index";
     }
 
     @PostMapping("/add")
@@ -19,6 +19,6 @@ public class CalculatorController {
                       @RequestParam("number2") Integer number2, Model model) {
         Integer result = number1 + number2;
         model.addAttribute("result", result);
-        return "index"; // 結果を含めてindex.htmlを再表示
+        return "index";
     }
 }
